@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["polamjag"]
   spec.email         = ["s@polamjag.info"]
   spec.summary       = %q{core library for opentie project}
-  spec.homepage      = "https://github.com/opentie/"
+  spec.homepage      = "https://github.com/opentie/opentie-core"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
