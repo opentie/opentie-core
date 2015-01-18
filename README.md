@@ -1,5 +1,7 @@
 # Opentie::Core
 
+[![Circle CI](https://circleci.com/gh/opentie/opentie-core.svg?style=svg)](https://circleci.com/gh/opentie/opentie-core)
+
 opentie core library
 
 ## Installation
