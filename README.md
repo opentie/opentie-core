@@ -1,6 +1,6 @@
 # Opentie::Core
 
-TODO: Write a gem description
+opentie core library
 
 ## Installation
 
