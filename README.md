@@ -1,4 +1,4 @@
-# Opentie::Core [![Circle CI](https://circleci.com/gh/opentie/opentie-core.svg?style=svg)](https://circleci.com/gh/opentie/opentie-core)
+# Opentie::Core [![Circle CI](https://circleci.com/gh/opentie/opentie-core.svg?style=svg)](https://circleci.com/gh/opentie/opentie-core) [![Build Status](https://travis-ci.org/opentie/opentie-core.svg?branch=master)](https://travis-ci.org/opentie/opentie-core)
 
 opentie core library
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+See opentie-app ( https://github.com/opentie/opentie-app )
 
 ## Contributing
 
