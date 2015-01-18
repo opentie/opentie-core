@@ -1,4 +1,5 @@
 require "opentie/core/version"
+require "opentie/core/account"
 require "opentie/core/group"
 require "opentie/core/project"
 require "opentie/core/bureau"
