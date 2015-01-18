@@ -1,8 +1,6 @@
 language: ruby
-install: bundle install --deployment
+install: bundle install
 cache:
   directories: vendor/bundle
-before_script:
-  - "bundle install --path vendor/bundle"
 script:
   - "bundle exec rspec"
