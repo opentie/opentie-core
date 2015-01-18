@@ -1,3 +1,5 @@
+require 'mongoid'
+
 module Opentie
   module Core
     class Group
