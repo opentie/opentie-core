@@ -4,7 +4,7 @@ module Opentie
   module Core
     module Request
       extend ActiveSupport::Concern
-
+      
       included do
         # list of all requests / applications
         @all_kinds = []
@@ -36,6 +36,7 @@ module Opentie
         def inherited(subclass)
           @all_kinds << subclass
         end
+
         def all_request_types
           @all_kinds
         end

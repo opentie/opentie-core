@@ -1,4 +1,4 @@
 module Opentie::Core
-  class Persona
+  module Persona
   end
 end
