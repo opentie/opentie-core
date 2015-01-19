@@ -1,4 +1,4 @@
-# Opentie::Core [![Circle CI](https://circleci.com/gh/opentie/opentie-core.svg?style=svg)](https://circleci.com/gh/opentie/opentie-core) [![Build Status](https://travis-ci.org/opentie/opentie-core.svg?branch=master)](https://travis-ci.org/opentie/opentie-core)
+# Opentie::Core [![Circle CI](https://circleci.com/gh/opentie/opentie-core.svg?style=svg)](https://circleci.com/gh/opentie/opentie-core) [![Build Status](https://travis-ci.org/opentie/opentie-core.svg?branch=master)](https://travis-ci.org/opentie/opentie-core) [![Gem Version](https://badge.fury.io/rb/opentie-core.svg)](http://badge.fury.io/rb/opentie-core)
 
 opentie core library
 
