@@ -1,9 +1,5 @@
-require 'mongoid'
-
-module Opentie
-  module Core
-    class Group
-      include Mongoid::Document
-    end
+module Opentie::Core
+  module Group
+      
   end
 end

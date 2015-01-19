@@ -1,20 +1,20 @@
-require 'mongoid'
+require_relative 'form_schema'
 
 module Opentie
   module Core
-    class Request
-      include Mongoid::Document
+    module Request
+      extend ActiveSupport::Concern
 
-      # list of all requests / applications
-      @all_kinds = []
+      included do
+        # list of all requests / applications
+        @all_kinds = []
+        
+        field :commited, type: Boolean, default: false
+        field :created_at, type: Time
+        field :updated_at, type: Time
+      end
 
-      belongs_to :project, inverse_of: :project
-
-      field :commited, type: Boolean, default: false
-      field :created_at, type: Time
-      field :updated_at, type: Time
-
-      class << self
+      module ClassMethods
         # helpers for DSL
         def subject(t)
           @subject = t
@@ -22,8 +22,8 @@ module Opentie
         def application_period(t)
           @application_period = t
         end
-        def declinable(t)
-          @declinable = t
+        def optional(t)
+          @optional = t
         end
         def in_charge_of(t)
           @in_charge_of = t

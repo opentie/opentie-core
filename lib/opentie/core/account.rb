@@ -1,12 +1,8 @@
-require 'mongoid'
-
-module Opentie
-  module Core
-    class Account
-      include Mongoid::Document
-
-      belongs_to :persona, inverse_of: :accounts
-
+module Opentie::Core
+  module Account
+    extend ActiveSupport::Concern
+    
+    included do
       field :auth_token, type: Hash
     end
   end

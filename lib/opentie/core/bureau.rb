@@ -1,6 +1,4 @@
-module Opentie
-  module Core
-    class Bureau < Group
-    end
+module Opentie::Core
+  module Bureau
   end
 end

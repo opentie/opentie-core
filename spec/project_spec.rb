@@ -3,9 +3,6 @@ require_relative 'spec_helper'
 
 RSpec.describe Opentie::Core::Project, :type => :model do
   describe "FakeProject" do
-    class FakeProject < Opentie::Core::Project
-    end
-
     subject(:pr) { FakeProject.new }
 
     it 'can create instance' do
