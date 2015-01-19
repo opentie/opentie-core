@@ -3,6 +3,10 @@ install: bundle install
 cache:
   directories: vendor/bundle
 services:
-  - mongodb
+- mongodb
 script:
-  - "bundle exec rspec"
+- bundle exec rspec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: en9qumDRaMUYYjixHQX6nJjRKe8J7C3RLn5gvFwZECV1viuPy2Fk7dOTSjcDYZciDqFCi+mnjmwOvqP+KE0gSgKnVvCsh8MfBlhwWLjIVESEUWCNHeDVbnk+e7RySTuiCQvmnXZkJZe2AJvwVX5zOdPu4ouk8hcmkXITGn3fXuI=
