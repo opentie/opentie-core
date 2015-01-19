@@ -3,6 +3,9 @@ module Opentie::Core
     extend ActiveSupport::Concern
 
     included do
+      include Mongoid::Document
+      include Mongoid::Enum
+
       field :created_at, type: Time
 
       field :subject, type: String

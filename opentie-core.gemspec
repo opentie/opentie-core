@@ -30,4 +30,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "factory_girl"
   spec.add_development_dependency "database_cleaner"
+
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "pry-byebug"
+  spec.add_development_dependency "pry-doc"
+  spec.add_development_dependency "better_errors"
 end

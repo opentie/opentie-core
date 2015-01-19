@@ -1,17 +1,8 @@
 # coding: utf-8
 require_relative 'spec_helper'
-require 'database_cleaner'
 
 RSpec.describe Opentie::Core::Project, :type => :model do
   describe "FakeProject" do
-    before :each do
-      DatabaseCleaner.start
-    end
-
-    after :each do
-      DatabaseCleaner.clean
-    end
-    
     it "should be able to create" do
       FakeProject.create!(hoge: :foo)
     end

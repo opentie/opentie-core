@@ -3,6 +3,9 @@ module Opentie::Core
     extend ActiveSupport::Concern
     
     included do
+      include Mongoid::Document
+      include Mongoid::Enum
+
       field :auth_token, type: Hash
     end
   end

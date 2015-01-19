@@ -1,20 +1,47 @@
 # -*- coding: utf-8 -*-
 require 'bundler/setup'
 require 'rspec'
-require 'opentie/core'
-require 'mongoid'
-Mongoid.load!('./spec/mongoid.yml')
-require 'mongoid/enum'
-
+require 'pry'
 require 'database_cleaner'
+
+require 'opentie/core'
+Mongoid.load!('./spec/mongoid.yml')
 
 DatabaseCleaner.strategy = :truncation
 
+RSpec.configure do |config|
+  config.before :each do
+    DatabaseCleaner.start
+  end
+
+  config.after :each do
+    DatabaseCleaner.clean
+  end
+end
+
 class FakeGroup
-  include Mongoid::Document
-  include Mongoid::Enum
   include Opentie::Core::Group
-  include Opentie::Core::FormSchema
+end
+
+class FakeProject < FakeGroup
+  include Opentie::Core::Project
+
+  request_class_name_is "FakeRequest"
+
+  yes_no "is_ok", "よいか",
+  yes: "よい",
+  no: "わるい"
+
+  radio "hoge", "ほげフィールド",
+  description: "",
+  values: {
+    foo: "ふー",
+    bar: "ばー",
+    baz: "ばず"
+  }
+
+  textarea "text", "書け",
+  description: "オイ　書け　オラ"
 end
 
 class FakeBureau < FakeGroup
@@ -22,12 +49,11 @@ class FakeBureau < FakeGroup
 end
 
 class FakeRequest
-  include Mongoid::Document
-  include Mongoid::Enum
   include Opentie::Core::Request
-  include Opentie::Core::FormSchema
+  
+  project_class_name_is "FakeProject"
 
-  belongs_to :project, class_name: 'FakeProject', inverse_of: :requests
+  #belongs_to :project, class_name: "FakeProject", inverse_of: :requests
 end
 
 class TestRequest < FakeRequest
@@ -45,27 +71,4 @@ class AnotherTestRequest < FakeRequest
 
   field :another_fake_number, type: Integer
   field :another_fake_hash, type: Hash
-end
-
-class FakeProject < FakeGroup
-  include Opentie::Core::Project
-
-  request_is FakeRequest
-
-  yes_no "is_ok", "よいか",
-  yes: "よい",
-  no: "わるい"
-
-  radio "hoge", "ほげフィールド",
-  description: "",
-  values: {
-    foo: "ふー",
-    bar: "ばー",
-    baz: "ばず"
-  }
-
-  textarea "text", "書け",
-  description: "オイ　書け　オラ"
-
-  has_many :requests, class_name: 'FakeRequest', inverse_of: :project
 end

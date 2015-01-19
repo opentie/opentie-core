@@ -1,6 +1,9 @@
 require "active_support"
+require "mongoid"
+require "mongoid/enum"
 
 require "opentie/core/version"
+require "opentie/core/form_schema"
 require "opentie/core/account"
 require "opentie/core/group"
 require "opentie/core/project"

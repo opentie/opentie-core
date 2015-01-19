@@ -1,16 +1,19 @@
-require_relative 'request'
-
 module Opentie::Core
   module Project
     extend ActiveSupport::Concern
 
+    included do
+      include FormSchema
+    end
+
     module ClassMethods
-      def request_is(req)
-        @request = req
+      def request_class_name_is(class_name)
+        @request_class_name = class_name
+        has_many :requests, class_name: class_name, inverse_of: :project
       end
 
       def request_class
-        @request
+        @request_class ||= @request_class_name.constantize
       end
     end
     
