@@ -2,5 +2,7 @@ language: ruby
 install: bundle install
 cache:
   directories: vendor/bundle
+services:
+  - mongodb
 script:
   - "bundle exec rspec"
