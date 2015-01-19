@@ -10,3 +10,6 @@ deploy:
   provider: rubygems
   api_key:
     secure: en9qumDRaMUYYjixHQX6nJjRKe8J7C3RLn5gvFwZECV1viuPy2Fk7dOTSjcDYZciDqFCi+mnjmwOvqP+KE0gSgKnVvCsh8MfBlhwWLjIVESEUWCNHeDVbnk+e7RySTuiCQvmnXZkJZe2AJvwVX5zOdPu4ouk8hcmkXITGn3fXuI=
+notifications:
+  slack:
+    secure: ObriTLEO71l8dz5lPyT5O7RblHpSUJ+OElVz1QH4ytQdjL10QlOp1jGbvc9Qsn0ftA3fkTxqXbGR7slFR7isHVF86DR+sg0ghnFpB6X/PDqVjN0Wfb+1ZSHwbaWvK45ePGjTXzGQPdfgGn1g7rpv4X3xe95eCDUUOZBh8GMejCw=
