@@ -4,6 +4,8 @@ require 'rspec'
 require 'pry'
 require 'database_cleaner'
 
+ENV["RACK_ENV"] ||= 'test'
+
 require 'opentie/core'
 Mongoid.load!('./spec/mongoid.yml')
 
